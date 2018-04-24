@@ -1,0 +1,36 @@
+<template name="product-item">
+  <view class="product_item" id="{{item.id}}" bindtap="navToProductDetail">
+    <view class='item_top'>
+      <view class='p_title' style="background:#3392ff">
+        <view class='dian'></view>
+        {{item.product_name}}
+      </view>
+      
+       <!-- <view class='p_tag'>
+        <view class='content' style='color:#3392ff;border-color:#3392ff'>{{item.productCharacterOne}}</view>
+        <view class='content' style='color:#3392ff;border-color:#3392ff'>{{item.productCharacterTwo}}</view>
+        <view class='content' style='color:#3392ff;border-color:#3392ff'>{{item.productCharacterThree}}</view>
+      </view>  -->
+    </view>
+    <view class="item-center">{{item.trait}}</view>
+    <view class='item_footer'>
+      <view class='fybl' style='color:#3392ff'>
+        <view class='percent'>{{item.quota}}万</view>
+        <view class='back'>额度</view>
+      </view>
+      <view class='lvli'>
+        <view class='percent1'>{{item.loan_rate}}</view>
+        <view class='year'>利率(年)</view>
+      </view>
+      <view class='edu'>
+        <view class='percent1'>{{item.mortgage_rate}}</view>
+        <view class='year'>抵押率</view>
+      </view>
+      <view class='qixian'>
+        <view class='percent1'>{{item.term}}年</view>
+        <view class='year'>期限</view>
+      </view>
+    </view>
+    
+  </view>
+  </template>

@@ -1,0 +1,198 @@
+/* page/shuaidan/shuaidan.wxss */
+.navigator-box {
+  opacity: 0;
+  position: relative;
+  background-color: #FFFFFF;
+  line-height: 1.41176471;
+  font-size: 34rpx;
+
+  transform: translateY(-50%);
+  transition: .3s;
+}
+.navigator-box-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.navigator {
+  padding: 20rpx 10rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 98%;
+}
+.navigator:before {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  right: 30rpx;
+  height: 1px;
+  border-top: 1rpx solid #D8D8D8;
+  color: #D8D8D8;
+}
+.navigator:first-child:before {
+  display: none;
+}
+.navigator-text {
+  flex: 1;
+  font-size: 16px
+}
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 28rpx;
+}
+
+
+.card-input {
+  border-bottom: 1rpx solid #e0e0e0;
+  padding: 18rpx 20rpx;
+  font-size: 26rpx;
+  width: 100%;
+  text-align:right;
+}
+
+.card-input:last-child {
+  border: 0;
+}
+
+.card-inputlabel {
+  display: flex;
+}
+
+.card-inputlabel .label {
+  margin-right: 5rpx;
+  padding: 18rpx 0;
+  font-size: 16px;
+  width:50%
+}
+
+.card-inputlabel .label.icon-location {
+  font-size: 20px;
+}
+
+.card-formitem {
+  background: #fff;
+  padding: 0 23rpx;
+  border-top: 1rpx solid #f0eff5;
+  border-bottom: 1rpx solid #f0eff5;
+  margin-top: 23rpx;
+}
+
+.card-formitem .card-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-user .eng {
+  position: absolute;
+  top: 0;
+  padding-top: 23rpx;
+  right: 0;
+  z-index: 999;
+}
+
+.card-user .eng .iconfont {
+  font-size: 48rpx;
+  color: #757575;
+}
+
+.card-user  .sign {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5rpx;
+  margin-right: 23rpx;
+  flex: 0 0 120rpx;
+}
+
+.card-user .sign image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #e0e0e0;
+}
+
+.card-user .message {
+  flex: 1;
+}
+
+.card-user .btn-verify {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  bottom: 23rpx;
+  border: 1rpx solid #72a92c;
+  color: #72a92c;
+  border-radius: 5rpx;
+  padding: 6rpx 22rpx;
+  font-size: 13px;
+}
+
+page .btn{
+  margin:10% 15px 15px 15px;
+  background-color:#03a5ef;
+  color:#fff;
+  font-size:13pt;
+}
+.card-inputlabel{
+  display: flex;
+  align-items: center;
+}
+.card-inputlabel {
+  border-bottom: 1rpx solid #f0eff5;
+}
+.card-inputlabel:last-child {
+  border-bottom: 0;
+}
+.card-inputlabel .card-input {
+  border: none;
+}
+
+.card-inputlabel .btn-verify {
+  position: absolute;
+  z-index: 99;
+  top: 23rpx;
+  right: 0;
+  background: #72a92c;
+  border: 1rpx solid #72a92c;
+  color: #fff;
+  border-radius: 5rpx;
+  padding: 6rpx 22rpx;
+  font-size: 13px;
+}
+
+
+.radio-group{
+  text-align: right;
+  float: right;
+}
+.radio-class{
+  float: right;
+  right: 0px;
+  transform:scale(0.8)
+}
+.download-btn{
+  width: 60px;
+  height: 20px;
+  margin: 0;
+  background-color:#03a5ef;
+  color:#fff;
+  font-size:8pt;
+  padding: 0 2rpx; 
+  line-height:2 
+
+}

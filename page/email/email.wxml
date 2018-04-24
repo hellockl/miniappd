@@ -1,0 +1,14 @@
+<!--page/email/email.wxml-->
+<!--page/contact/contact.wxml-->
+<view class='contactPage'>
+  
+    <view class='name'>
+      <view class='content'>
+        email:
+        <input class="input" name="mail" bindinput="mailInput" placeholder="请输入邮箱" />
+      </view>
+    </view>
+    <view class='submit2' wx:if="{{block==false}}">发送</view>
+    <view class='submit' wx:if="{{block==true}}" bindtap="submitData">发送</view>
+</view>
+

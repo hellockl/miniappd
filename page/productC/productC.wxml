@@ -1,0 +1,111 @@
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">额度</view>
+          <input placeholder="请填写额度" class="card-input" style="text-align:right " value="{{quota}}" bindinput="input1" placeholder-class="gray3" maxlength="20" name="quota" />
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:40%'>额度备注</view>
+          <input placeholder="填写额度备注" class="card-input" placeholder-class="gray3" maxlength="20" bindinput="input2" name="quota_remarks" value="{{quota_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">抵押率</view>
+          <input placeholder="请填写抵押率" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input3" name="mortgage_rate" value="{{mortgage_rate}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">期限</view>
+          <view class='radio-class'>
+            <checkbox-group name="spare_house" bindchange="input4">
+              <label wx:for="{{spare_house_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">期限备注</view>
+          <input placeholder="请填写期限备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input5" name="term_remarks" value="{{term_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:66%'>还款方式</view>
+          <view class='radio-class'>
+            <checkbox-group name="repayment_method" value="[1,2]" bindchange="input6">
+              <label wx:for="{{repayment_method_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">还款方式备注</view>
+          <input placeholder="请填写还款方式备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input7" name="repayment_method_remarks" value="{{repayment_method_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">还款日</view>
+          <input placeholder="请填写还款日" class="card-input" placeholder-class="gray3" bindinput="input8"  maxlength="30" name="repayment_date" value="{{repayment_date}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">贷款利率</view>
+          <input placeholder="请填写贷款利率" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input9"  name="loan_rate" value="{{loan_rate}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">贷款利率备注</view>
+          <input placeholder="请填写贷款利率备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input10"  name="loan_rate_remarks" value="{{loan_rate_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">逾期罚息</view>
+          <input placeholder="请填写逾期罚息" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input11"  name="late_charge" value="{{late_charge}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">保证金</view>
+          <input placeholder="请填写保证金" class="card-input" placeholder-class="gray3" maxlength="30" type="number" bindinput="input12"  name="deposit" value="{{deposit}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>公证</view>
+          <view class='radio-class'>
+            <radio-group name="is_justice" bindchange="input13" >
+              <label wx:for="{{is_justice_item}}" wx:key="key">
+                <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </radio-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">公证费</view>
+          <input placeholder="请填写公证费" class="card-input" placeholder-class="gray3" maxlength="30" type="number" bindinput="input14"  name="justice_fee" value="{{justice_fee}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>评估</view>
+          <view class='radio-class'>
+            <radio-group name="is_evaluate" bindchange="input15" >
+              <label wx:for="{{is_evaluate_item}}" wx:key="key">
+                <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </radio-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">评估费</view>
+          <input placeholder="请填评估费" class="card-input" placeholder-class="gray3" maxlength="30" type="number" bindinput="input16"  name="evaluate_fee" value="{{evaluate_fee}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">下户费</view>
+          <input placeholder="请填写下户费" class="card-input" placeholder-class="gray3" maxlength="30" type="number" bindinput="input17"  name="settle_fee" value="{{settle_fee}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">其他费用</view>
+          <input placeholder="请填写其他费用" class="card-input" placeholder-class="gray3" maxlength="30" type="number" bindinput="input18"  name="other_fee" value="{{other_fee}}"/>
+        </view>
+        
+         
+      </view>
+   
+    </view>
+  </form>
+  
+</view>

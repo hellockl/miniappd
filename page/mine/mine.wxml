@@ -1,0 +1,33 @@
+<!--page/mine/mine.wxml-->
+<view class='mine-top'>
+  <image class='bg' src='../../image/my-bg.png'></image>
+  <image class='headPic' src="{{avatarUrl}}"></image>
+  <view class='title'>总佣金 (元)</view>
+  <text class='cash' bindtap="navToWithdrawals">提现＞</text>
+  <view class='money'>{{totalMoney}}
+  </view>
+  <view class='title1'>待提现 (元)
+    <text class='add'>+{{waitMoney}}</text>
+  </view>
+  <view class='myCase'>
+    <view class='content' bindtap="navToOrderList">
+      <image class='icon' src='../../image/list-icon.png'></image>
+      <text>我的单子</text>
+    </view>
+  </view>
+</view>
+<view class='nothing'></view>
+<view class='name'>
+  <view class='nameContent'>
+    <image class='nameP' src='../../image/wode.png'></image>
+    <text class='left'>姓名</text>
+    <text class='right'>{{name}}</text>
+  </view>
+</view>
+<view class='contact'>
+  <view class='nameContent'>
+    <image class='nameP' src='../../image/phone-icon.png'></image>
+    <text class='left'>联系方式</text>
+    <text class='right1' bindtap="navToContact">去完善＞</text>
+  </view>
+</view>

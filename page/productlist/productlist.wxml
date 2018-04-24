@@ -1,0 +1,13 @@
+<!--page/productlsit/productlist.wxml-->
+<import src="../common/product-item.wxml"/>
+<view class='editview'>
+  <button type="primary" class="btn_card2" bindtap="navToSearchProduct" plain="true">搜索产品</button>
+  <button type="primary" class="btn_card1" bindtap="navToAddProduct" plain="true">添加产品</button>        
+</view>
+<view class='product_list'>
+  <block wx:for="{{product_list}}" wx:key="k">
+    <template is="product-item" data="{{item}}" />
+  </block>
+ 
+</view>
+

@@ -1,0 +1,380 @@
+<!--page/fieldShow/fieldShow.wxml-->
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">产品名称</view>
+          <block wx:if="{{product_name}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">产品特点</view>
+          <block wx:if="{{trait}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">资金方</view>
+          <block wx:if="{{fund}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">年龄</view>
+          <block wx:if="{{age}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">年龄备注</view>
+          <block wx:if="{{age_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">国、户籍</view>
+          <block wx:if="{{nationality}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">征信界定</view>
+          <block wx:if="{{credit_line}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">征信界定备注</view>
+          <block wx:if="{{credit_line_remark}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">收入</view>
+          <block wx:if="{{income}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">房产类型</view>
+          <block wx:if="{{house_type}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">房产类型配注</view>
+          <block wx:if="{{house_type_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">土地性质</view>
+          <block wx:if="{{land_property}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">准入区域</view>
+          <block wx:if="{{access_area}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">准入区域配注</view>
+          <block wx:if="{{access_area_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">面积要求</view>
+          <block wx:if="{{area_reuqire}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">房龄</view>
+          <block wx:if="{{house_age}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">接受未成年/老人</view>
+          <block wx:if="{{access_range}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">是否接受第三方抵押</view>
+          <block wx:if="{{access_third_party_mortgage}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">是否需要备用房</view>
+          <block wx:if="{{spare_house}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">备用房配注</view>
+          <block wx:if="{{spare_house_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">额度</view>
+          <block wx:if="{{quota}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">额度配注</view>
+          <block wx:if="{{quota_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">抵押率</view>
+          <block wx:if="{{mortgage_rate}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">期限</view>
+          <block wx:if="{{term}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">期限配注</view>
+          <block wx:if="{{term_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">还款方式</view>
+          <block wx:if="{{repayment_method}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">还款方式配注</view>
+          <block wx:if="{{repayment_method_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">还款日期</view>
+          <block wx:if="{{repayment_date}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">贷款利率</view>
+          <block wx:if="{{loan_rate}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">贷款利率配注</view>
+          <block wx:if="{{loan_rate_remarks}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">逾期罚息</view>
+          <block wx:if="{{late_charge}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">保证金</view>
+          <block wx:if="{{deposit}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">有无公正</view>
+          <block wx:if="{{is_justice}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">公证费</view>
+          <block wx:if="{{justice_fee}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">有无评估</view>
+          <block wx:if="{{is_evaluate}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">评估费</view>
+          <block wx:if="{{evaluate_fee}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">下户费</view>
+          <block wx:if="{{settle_fee}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">其它费用</view>
+          <block wx:if="{{other_fee}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">包装内容</view>
+          <block wx:if="{{package_content}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">所需材料</view>
+          <block wx:if="{{required_materials}}">
+            <switch checked bindchange="switch1Change"/>
+          </block>
+          <block wx:else>
+            <switch bindchange="switch1Change"/>
+          </block>
+        </view>
+        
+        
+      </view>
+   
+      <view class="">
+        <button formType="submit" class="btn">提交</button>
+      </view>
+    </view>
+  </form>
+  
+</view>
+

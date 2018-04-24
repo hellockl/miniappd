@@ -1,0 +1,31 @@
+<!--page/withdrawals/withdrawals.wxml-->
+<!--page/contact/contact.wxml-->
+<view class='contactPage'>
+  <view class='name'>
+    <view class='content'>
+      提现金额:
+      <input class="input" name="money" placeholder="请输入提现金额" bindinput="moneyInput" />
+    </view>
+  </view>
+  <view class='name'>
+    <view class='content'>
+      收款人姓名:
+      <input class="input" name="receiveName" placeholder="请输入收款人姓名" bindinput="receiveNameInput" />
+    </view>
+
+  </view>
+  <view class='name'>
+    <view class='content'>
+      开户行:
+      <input class="input" name="bankName" placeholder="xx市xx区xx支行" bindinput="bankNameInput" />
+    </view>
+  </view>
+  <view class='name'>
+    <view class='content'>
+      银行卡号:
+      <input class="input" name="bankNum" placeholder="请输入银行卡号" bindinput="bankNumInput" />
+    </view>
+  </view>
+  <view class='submit2' wx:if="{{block==false}}">提交</view>
+  <view class='submit' wx:if="{{block==true}}" bindtap="submitData">提交</view>
+</view>

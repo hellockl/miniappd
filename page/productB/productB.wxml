@@ -1,0 +1,94 @@
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label" style='width:62%'>房产类型</view>
+          <view class='radio-class'>
+            <checkbox-group name="house_type" bindchange="input1">
+              <label wx:for="{{house_type_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">房产类型备注</view>
+          <input placeholder="房产类型备注" class="card-input" placeholder-class="gray3" bindinput="input2" maxlength="20" name="house_type_remarks" value="{{house_type_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:38%'>地地性质</view>
+          <view class='radio-class'>
+            <checkbox-group name="land_property" bindchange="input3">
+              <label wx:for="{{land_property_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">准入区域</view>
+          <view class='radio-class'>
+            <checkbox-group name="access_area" bindchange="input4">
+              <label wx:for="{{access_area_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">准入区域备注</view>
+          <input placeholder="请填写准入区域备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input5" name="access_area_remarks" value="{{access_area_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">面积要求</view>
+          <input placeholder="请填写面积要求" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="area_reuqire" value="{{area_reuqire}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">房龄</view>
+          <input placeholder="请填写房龄" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input7" name="house_age" value="{{house_age}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:45%'>接受范围</view>
+          <view class='radio-class'>
+            <checkbox-group name="access_range" bindchange="input8">
+              <label wx:for="{{access_range_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:45%'>是否接受第三方抵押</view>
+          <view class='radio-class'>
+            <checkbox-group name="access_third_party_mortgage" bindchange="input9">
+              <label wx:for="{{access_third_party_mortgage_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:45%'>备用房</view>
+          <view class='radio-class'>
+            <checkbox-group name="spare_house" bindchange="input10">
+              <label wx:for="{{spare_house_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">备用房备注</view>
+          <input placeholder="请填写备用房备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input11" name="spare_house_remarks" value="{{spare_house_remarks}}"/>
+        </view>
+         
+      </view>
+   
+    </view>
+  </form>
+  
+</view>

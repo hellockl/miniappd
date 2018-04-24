@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<import src="../common/product-item.wxml"/>
+<view>
+  <view class="top">
+    <view class="info">
+      <view class="headPic-img">
+        <image class="headPic" src="{{headPic}}"></image>
+      </view>
+      <view class='info-text'>
+        <view><text>18701881920</text></view>
+        <view><text>曹大大</text></view>
+      </view>
+    </view>    
+    <view class="call">
+      <block wx:if="{{isMy==false}}">
+        <view bindtap="navToCall">
+          <image class="call-img" src="../../image/phone-icon.png"></image>
+          <text class="call-text">人工咨询</text>
+        </view>
+        
+      </block>
+      <block wx:if="{{isMy==true}}">
+        
+        <view style='text-align:center'>
+          <button type="primary" class="btn_add"  bindtap="navToAddProduct"  plain="true">添加产品</button>
+        </view>
+       
+      </block>    
+    </view>
+  </view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">主打产品</view>
+  </view>
+  <view class='product_list'>
+    <block wx:for="{{product_list1}}" wx:key="k">
+      <template is="product-item" data="{{item}}" />
+    </block>
+  </view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">民间产品</view>
+  </view>
+  <view class='product_list'>
+    <block wx:for="{{product_list2}}" wx:key="k">
+      <template is="product-item" data="{{item}}" />
+    </block>
+  </view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">银行产品</view>
+  </view>
+  <view class='product_list'>
+    <block wx:for="{{product_list3}}" wx:key="k">
+      <template is="product-item" data="{{item}}" />
+    </block>
+  </view>
+</view>

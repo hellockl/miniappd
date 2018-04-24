@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "page/index/index",
+    "page/component/index",
+    "page/logs/logs",
+    "page/card/card",
+    "page/createcard/createcard",
+    "page/shuaidan/shuaidan",
+    "page/productlist/productlist",
+    "page/productdetail/productdetail",
+    "page/orderlist/orderlist",
+    "page/mine/mine",
+    "page/mineNews/mineNews",
+    "page/contact/contact",
+    "page/withdrawals/withdrawals",
+    "page/email/email",
+    "page/addproduct/addproduct",
+    "page/productA/productA",
+    "page/productB/productB",
+    "page/productC/productC",
+    "page/fieldShow/fieldShow",
+    "page/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3392ff",
+    "navigationBarTitleText": "产品lite",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/index/index",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "page/productlist/productlist",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-active.png",
+        "text": "产品"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
+}

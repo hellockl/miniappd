@@ -1,0 +1,104 @@
+<!--page/search/search.wxml-->
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">年龄</view>
+          <input placeholder="填写年龄" class="card-input" style="text-align:right " value="{{age}}" bindinput="input1" placeholder-class="gray3" maxlength="20" name="age" />
+        </view>
+        
+        <view class="card-inputlabel">
+          <view class="label" style='width:34%'>国、户籍</view>
+          
+          <view class='radio-class'>
+            <checkbox-group name="nationality" bindchange="input2">
+              <label wx:for="{{nationality_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+
+        <view class="card-inputlabel">
+          <view class="label" style='width:55%'>房产类型</view>
+          <view class='radio-class'>
+            <checkbox-group name="house_type" bindchange="input3">
+              <label wx:for="{{house_type_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+
+        <view class="card-inputlabel">
+          <view class="label" style='width:35%'>地地性质</view>
+          <view class='radio-class'>
+            <checkbox-group name="land_property" bindchange="input4">
+              <label wx:for="{{land_property_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        
+        <view class="card-inputlabel">
+          <view class="label">面积要求</view>
+          <input placeholder="请填写面积要求" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input5" name="area_reuqire" value="{{area_reuqire}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">房龄</view>
+          <input placeholder="请填写房龄" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="house_age" value="{{house_age}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:46%'>接受范围</view>
+          <view class='radio-class'>
+            <checkbox-group name="access_range" bindchange="input7">
+              <label wx:for="{{access_range_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:49%'>是否接受第三方抵押</view>
+          <view class='radio-class'>
+            <checkbox-group name="access_third_party_mortgage" bindchange="input8">
+              <label wx:for="{{access_third_party_mortgage_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:54%'>备用房</view>
+          <view class='radio-class'>
+            <checkbox-group name="spare_house" bindchange="input9">
+              <label wx:for="{{spare_house_item}}" wx:key="key">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>房屋公证</view>
+          <view class='radio-class'>
+            <radio-group name="is_justice" bindchange="input10" >
+              <label wx:for="{{is_justice_item}}" wx:key="key">
+                <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+      <view class="">
+        <button formType="submit" class="btn">搜索</button>
+      </view>
+    </view>
+  </form>
+  
+</view>
+

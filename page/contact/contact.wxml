@@ -1,0 +1,30 @@
+<!--page/contact/contact.wxml-->
+<view class='contactPage'>
+  
+    <view class='name'>
+      <view class='content'>
+        姓名:
+        <input class="input" name="name" bindinput="nameInput" placeholder="请输入您的姓名" />
+      </view>
+    </view>
+    <view class='name'>
+      <view class='content'>
+        手机号:
+        <input class="input" name="telephone" placeholder="请输入手机号" bindinput="telephoneInput" />
+      </view>
+      <view class='send' bindtap="getVerificationCode">{{time}}</view>
+    </view>
+    <view class='name'>
+      <view class='content'>
+        验证码:
+        <input class="input" name="smsCode" bindinput="codeInput" placeholder="请输入验证码"/>
+      </view>
+    </view>
+    <view class='submit2' wx:if="{{block==false}}">提交</view>
+    <view class='submit' wx:if="{{block==true}}" bindtap="submitData">提交</view>
+  
+</view>
+<view class='say'>
+  <view class='one'>成功提交联系方式后,即可发起甩单,</view>
+  <view class='two'>为保证我们可以准确联系到您,请认真填写姓名与手机号。</view>
+</view>

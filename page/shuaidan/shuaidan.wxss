@@ -1,0 +1,189 @@
+/* page/shuaidan/shuaidan.wxss */
+.header-title{
+  margin-top: 10px;
+  text-align: center;
+}
+.header-title-a{
+  font-size: 20px;
+  color: 5e5e5e;
+}
+.header-title-b{
+  font-size: 12px;
+  color:#888888;
+}
+.card-input {
+  border-bottom: 1rpx solid #e0e0e0;
+  padding: 18rpx 20rpx;
+  font-size: 26rpx;
+  width: 100%;
+  text-align:right;
+}
+
+.card-input:last-child {
+  border: 0;
+}
+
+.card-inputlabel {
+  display: flex;
+}
+
+.card-inputlabel .label {
+  margin-right: 5rpx;
+  padding: 18rpx 0;
+  font-size: 16px;
+  width:50%
+}
+
+.card-inputlabel .label.icon-location {
+  font-size: 20px;
+}
+
+.card-formitem {
+  background: #fff;
+  padding: 0 23rpx;
+  border-top: 1rpx solid #f0eff5;
+  border-bottom: 1rpx solid #f0eff5;
+  margin-top: 23rpx;
+}
+
+.card-formitem .card-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-user .eng {
+  position: absolute;
+  top: 0;
+  padding-top: 23rpx;
+  right: 0;
+  z-index: 999;
+}
+
+.card-user .eng .iconfont {
+  font-size: 48rpx;
+  color: #757575;
+}
+
+.card-user  .sign {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5rpx;
+  margin-right: 23rpx;
+  flex: 0 0 120rpx;
+}
+
+.card-user .sign image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #e0e0e0;
+}
+
+.card-user .message {
+  flex: 1;
+}
+
+.card-user .btn-verify {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  bottom: 23rpx;
+  border: 1rpx solid #72a92c;
+  color: #72a92c;
+  border-radius: 5rpx;
+  padding: 6rpx 22rpx;
+  font-size: 13px;
+}
+
+page .btn{
+  margin:10% 15px 15px 15px;
+  background-color:#03a5ef;
+  color:#fff;
+  font-size:13pt;
+}
+.card-inputlabel{
+  display: flex;
+  align-items: center;
+}
+.card-inputlabel {
+  border-bottom: 1rpx solid #f0eff5;
+}
+.card-inputlabel:last-child {
+  border-bottom: 0;
+}
+.card-inputlabel .card-input {
+  border: none;
+}
+
+.card-inputlabel .btn-verify {
+  position: absolute;
+  z-index: 99;
+  top: 23rpx;
+  right: 0;
+  background: #72a92c;
+  border: 1rpx solid #72a92c;
+  color: #fff;
+  border-radius: 5rpx;
+  padding: 6rpx 22rpx;
+  font-size: 13px;
+}
+
+.selectProduct-btn{
+  height: 80rpx;
+  border-radius: 50rpx;
+  float: center;
+  left: 10%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  margin:20px 0;
+  clear: both;
+  background: linear-gradient(to right, #F75000 , #FF9D6F)
+}
+.selectedProduct-btn{
+  
+  height: 100rpx;
+  border-radius: 50rpx;
+  float: center;
+  left: 10%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  margin:20px 0;
+  clear: both;
+  background: linear-gradient(to right, #6495ED , #4169E1)
+}
+.selected-product{
+  float: left;
+  width: 100%;
+  font-size: 30rpx;
+  height: 20px;
+
+}
+.re-select{
+  clear: both;
+  color: #b5d1ff;
+  font-size: 24rpx;
+  
+}
+.radio-group{
+  text-align: right;
+  float: right;
+}
+.radio-class{
+  float: right;
+  right: 0px;
+  transform:scale(0.8)
+}
+.download-btn{
+  width: 60px;
+  height: 20px;
+  margin: 0;
+  background-color:#03a5ef;
+  color:#fff;
+  font-size:8pt;
+  padding: 0 2rpx; 
+  line-height:2 
+
+}

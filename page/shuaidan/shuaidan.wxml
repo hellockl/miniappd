@@ -1,0 +1,136 @@
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  <view class='header-title'><text class='header-title-a'>业务资料</text><text class='header-title-b'>（必填）</text></view>
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">意向金额</view>
+          <input placeholder="填写意向金额" class="card-input" style="text-align:right " value="{{amountMoney}}" placeholder-class="gray3" maxlength="20" name="amountMoney" />
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:40%'>佣金比例</view>
+          <input placeholder="填写与客户商定后的佣金比例：3%-12%" class="card-input" placeholder-class="gray3" maxlength="20" name="backReat" value="{{backReat}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">客户姓名</view>
+          <input placeholder="请填客户姓名" class="card-input" placeholder-class="gray3" maxlength="30" name="customerName" value="{{customerName}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">客户年龄</view>
+          <input placeholder="请填客户年龄" class="card-input" placeholder-class="gray3" maxlength="30" name="age" value="{{age}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:60%'>婚姻状况</view>
+          <view class='radio-class'>
+            <radio-group class="radio-group" name="marryStatus">
+              <label wx:for="{{marry_status}}" wx:key="property">
+                <radio color="#3392ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+              </label>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+      <view class='header-title'><text class='header-title-a'>至少填写一项</text><text class='header-title-b'>（必填）</text></view>
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>打卡工资</view>
+          <radio-group  name="basicWages" class="radio-group">
+            <label class="radio-class" wx:for="{{daka_status}}" wx:key="property">
+              <radio color="#3392ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">税后收入</view>
+          <input placeholder="填写税后收入" class="card-input" placeholder-class="gray3" maxlength="20" name="afterTaxMoney" value="{{afterTaxMoney}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>现单位工作年限</view>
+          <input placeholder="填写年限" class="card-input" placeholder-class="gray3" maxlength="20" name="continuousWorklife" value="{{continuousWorklife}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>有无社保</view>
+          <radio-group class="radio-group" name="socialSecurityStatus" bindchange="radioChangeSB">
+            <label class="radio-class" wx:for="{{shebao_status}}" wx:key="property">
+              <radio color="#3392ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+        <view class="card-inputlabel" wx:if="{{sbIsShow}}">
+          <view class="label">社保月缴</view>
+          <input placeholder="填写社保月缴金额" class="card-input" placeholder-class="gray3" maxlength="20" name="socialSecurityBase"/>
+        </view>
+        <view class="card-inputlabel" >
+          <view class="label" style='width:70%'>有无公积金</view>
+          <radio-group class="radio-group" name="gjjStatus" bindchange="radioChangeGJJ">
+            <label class="radio-class" wx:for="{{gjj_status}}" wx:key="property">
+              <radio color="#3392ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+        <view class="card-inputlabel" wx:if="{{gjjIsShow}}">
+          <view class="label">公积金月缴</view>
+          <input placeholder="填写公积金月缴金额" class="card-input" placeholder-class="gray3" maxlength="20" name="gjjBase"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>有无保单</view>
+
+          <radio-group class="radio-group" name="policStatus" bindchange="radioChangeBD">
+            <label class="radio-class" wx:for="{{baodan_status}}" wx:key="property">
+              <radio color="#3392ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+        <view class="card-inputlabel" wx:if="{{bdIsShow}}">
+          <view class="label">保单情况</view>
+          <input placeholder="填写保单情况" class="card-input" placeholder-class="gray3" maxlength="20" name="policDetail"/>
+        </view>
+      </view>
+      <view style='padding:0 10%' hidden="{{selected!==0}}">
+        <view class="selectProduct-btn" bindtap="navToProductList">
+          选择产品        
+        </view>
+      </view>
+      <view style='padding:0 10%' hidden="{{selected!==1}}">
+        <view class="selectedProduct-btn" bindtap="navToProductList">
+          <text class="selected-product">已选择产品：{{productName}}</text>
+          <text class="re-select">点击重选</text>        
+        </view>
+      </view>
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label" style='width:80%'>书面授权书</view>  
+          <button  class="download-btn" bindtap="navToEmail">填写邮箱</button>       
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">上传书面授权书</view>
+          <view class="weui-uploader__files">           
+            <view class="weui-uploader__file" wx:if="{{cardPicture}}">
+              <image class="weui-uploader__img" src="{{cardPicture}}" data-src="{{cardPicture}}"></image>
+            </view>            
+          </view> 
+          <view class="weui-uploader__input-box" style='margin-top:6px'>
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">上传证件照</view>
+          <view class="weui-uploader__files">           
+            <view class="weui-uploader__file" wx:if="{{grantPicture}}">
+              <image class="weui-uploader__img" src="{{grantPicture}}" data-src="{{grantPicture}}"></image>
+            </view>            
+          </view> 
+          <view class="weui-uploader__input-box" style='margin-top:6px'>
+            <view class="weui-uploader__input" bindtap="chooseImage2"></view>
+          </view>
+        </view>
+      </view>
+      <view class="">
+        <button formType="submit" class="btn">甩单</button>
+      </view>
+    </view>
+  </form>
+  
+</view>

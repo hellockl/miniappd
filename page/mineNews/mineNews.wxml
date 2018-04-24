@@ -1,0 +1,17 @@
+<!--page/mineNews/mineNews.wxml-->
+<block wx:for="{{newsList}}" wx:key="k">
+  <view class='new_list'>
+    <image class='pic' src='../../image/notice-icon.png'></image>
+    <view>
+      <view class='right'>
+        <view class='top'>
+          <text class='first'>{{item.title}}
+              <text class='radio' wx:if="{{11}}"></text>
+          </text>
+          <text class='second'>{{item.time}}</text>
+        </view>
+        <view class='bot'>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</block>

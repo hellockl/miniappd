@@ -1,0 +1,349 @@
+<!--page/productdetail/productdetail.wxml-->
+<!--page/productlsit/productlist.wxml-->
+<view class='product_list'>
+  <view class="product_item">
+    <view class='item_top'>
+      <view class='p_title'>
+        <view class='dian'></view>
+        {{productInfo.product_name}}</view>
+       <!-- <view class='p_star'>
+        <block wx:for="{{productInfo.star}}" wx:for-item="i" wx:key="k">
+          <image class='star-img' src="../../image/star-{{i}}.png"></image>
+        </block>
+      </view>  -->
+      <!-- <view class='p_tag'>
+        <view class='content'>{{productInfo.productCharacterOne}}</view>
+        <view class='content'>{{productInfo.productCharacterTwo}}</view>
+        <view class='content'>{{productInfo.productCharacterThree}}</view>
+      </view> -->
+    </view>
+    <view class='item_footer'>
+      <text class='p-content'>{{productInfo.trait}}</text>
+    </view>
+  </view>
+  <view>
+    <!-- <image src='../../image/p-shadow.png' style='width:100%;height:20px'></image>
+    <view class="navbar">
+      <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+    </view>
+    <view class="recommend" hidden="{{currentTab!==0}}"> -->
+      <view class='recommend-one'>
+        <view class='content1'>
+          年龄
+        </view>
+        <view class='content2'>
+          {{productInfo.age}}岁
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          年龄备注
+        </view>
+        <view class='content2'>
+          {{productInfo.age_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          国、户籍
+        </view>
+        <view class='content2'>
+          {{productInfo.nationality}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          征信界定
+        </view>
+        <view class='content2'>
+          {{productInfo.credit_line}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          征信界定备注
+        </view>
+        <view class='content2'>
+          {{productInfo.credit_line_remarks}}     
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          收入认定
+        </view>
+        <view class='content2'>
+          {{productInfo.income}}     
+        </view>
+      </view>
+    <!-- </view> -->
+    <!-- <view class="recommend" hidden="{{currentTab!==1}}"> -->
+      <view class='recommend-one'>
+        <view class='content1'>
+          房产类型
+        </view>
+        <view class='content2'>
+          {{productInfo.house_type}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          房产类型备注
+        </view>
+        <view class='content2'>
+          {{productInfo.house_type_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          土地性质
+        </view>
+        <view class='content2'>
+          {{productInfo.land_property}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          准入区域
+        </view>
+        <view class='content2'>
+          {{productInfo.access_area}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          准入区域备注
+        </view>
+        <view class='content2'>
+          {{productInfo.access_area_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          面积要求
+        </view>
+        <view class='content2'>
+          {{productInfo.area_reuqire}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          房龄
+        </view>
+        <view class='content2'>
+          {{productInfo.house_age}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          接受未成年/老人
+        </view>
+        <view class='content2'>
+          {{productInfo.access_range}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          是否接受第三方抵押
+        </view>
+        <view class='content2'>
+          {{productInfo.access_third_party_mortgage}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          备用房
+        </view>
+        <view class='content2'>
+          {{productInfo.spare_house}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          备用房备注
+        </view>
+        <view class='content2'>
+          {{productInfo.spare_house_remarks}}
+        </view>
+      </view>
+      
+      
+      
+    <!-- </view> -->
+    <!-- <view class="recommend" hidden="{{currentTab!==2}}"> -->
+      <view class='recommend-one'>
+        <view class='content1'>
+          额度
+        </view>
+        <view class='content2'>
+          {{productInfo.quota}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          额度备注
+        </view>
+        <view class='content2'>
+          {{productInfo.quota_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          抵押率
+        </view>
+        <view class='content2'>
+          {{productInfo.mortgage_rate}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          期限
+        </view>
+        <view class='content2'>
+          {{productInfo.term}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          期限备注
+        </view>
+        <view class='content2'>
+          {{productInfo.term_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          还款方式
+        </view>
+        <view class='content2'>
+          {{productInfo.repayment_method}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          还款方式备注
+        </view>
+        <view class='content2'>
+          {{productInfo.repayment_method_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          还款日
+        </view>
+        <view class='content2'>
+          {{productInfo.repayment_date}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          贷款利率
+        </view>
+        <view class='content2'>
+          {{productInfo.loan_rate}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          贷款利率备注
+        </view>
+        <view class='content2'>
+          {{productInfo.loan_rate_remarks}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          逾期罚息
+        </view>
+        <view class='content2'>
+          {{productInfo.late_charge}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          保证金
+        </view>
+        <view class='content2'>
+          {{productInfo.deposit}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          公证
+        </view>
+        <view class='content2'>
+          {{productInfo.is_justice}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          公证费
+        </view>
+        <view class='content2'>
+          {{productInfo.justice_fee}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          评估
+        </view>
+        <view class='content2'>
+          {{productInfo.is_evaluate}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          评估费
+        </view>
+        <view class='content2'>
+          {{productInfo.evaluate_fee}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          下户费
+        </view>
+        <view class='content2'>
+          {{productInfo.settle_fee}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          其他费用
+        </view>
+        <view class='content2'>
+          {{productInfo.other_fee}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          所需材料
+        </view>
+        <view class='content2'>
+          {{productInfo.required_materials}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          其它备注
+        </view>
+        <view class='content2'>
+          {{productInfo.package_content}}
+        </view>
+      </view>
+     <!-- </view>  -->
+    
+
+    
+    <!-- <view class="" wx:if="{{isMy}}">
+        <button formType="submit" class="btn">编辑</button>
+    </view> -->
+    <view class='editview'>
+           <button type="primary" id="{{productInfo.id}}" class="btn_card1" bindtap="navToEditProduct" plain="true">编缉产品</button>
+           <button type="primary" id="{{productInfo.id}}" class="btn_card2" bindtap="navToFieldShow" plain="true">显示字段</button>
+           
+    </view>
+
+   </view> 
+  
+
+</view>
