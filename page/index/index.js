@@ -25,19 +25,19 @@ Page({
         isMy:true
       });
     }
-    let params = {page:0,size:2,type:1};
+    let params = {page:0,size:2,type:1,is_index:1};
     dataAPI.getProductList(params).then((res) => {
       this.setData({
         product_list1 : res.data
       });
     });
-    let params2 = { page: 0, size: 2, type: 2 };
+    let params2 = { page: 0, size: 2, type: 2, is_index: 1};
     dataAPI.getProductList(params2).then((res) => {
       this.setData({
         product_list2: res.data
       });
     });
-    let params3 = { page: 0, size: 2, type: 3 };
+    let params3 = { page: 0, size: 2, type: 3, is_index: 1};
     dataAPI.getProductList(params3).then((res) => {
       this.setData({
         product_list3: res.data

@@ -6,16 +6,7 @@
       <view class='p_title'>
         <view class='dian'></view>
         {{productInfo.product_name}}</view>
-       <!-- <view class='p_star'>
-        <block wx:for="{{productInfo.star}}" wx:for-item="i" wx:key="k">
-          <image class='star-img' src="../../image/star-{{i}}.png"></image>
-        </block>
-      </view>  -->
-      <!-- <view class='p_tag'>
-        <view class='content'>{{productInfo.productCharacterOne}}</view>
-        <view class='content'>{{productInfo.productCharacterTwo}}</view>
-        <view class='content'>{{productInfo.productCharacterThree}}</view>
-      </view> -->
+       
     </view>
     <view class='item_footer'>
       <text class='p-content'>{{productInfo.trait}}</text>
@@ -32,7 +23,7 @@
           年龄
         </view>
         <view class='content2'>
-          {{productInfo.age}}岁
+          {{productInfo.age}}-{{productInfo.age_max}}岁
         </view>
       </view>
       <view class='recommend-one'>
@@ -53,10 +44,18 @@
       </view>
       <view class='recommend-one'>
         <view class='content1'>
-          征信界定
+          征信界定(连)
         </view>
         <view class='content2'>
           {{productInfo.credit_line}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          征信界定(累)
+        </view>
+        <view class='content2'>
+          {{productInfo.credit_line2}}
         </view>
       </view>
       <view class='recommend-one'>

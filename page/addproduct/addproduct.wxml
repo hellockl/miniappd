@@ -22,6 +22,18 @@
           </view>
         </view>
         <view class="card-inputlabel">
+          <view class="label" >首页推荐</view>
+          <view class="label-input">
+            <view class='radio-class'>
+              <radio-group name="is_index" bindchange="input_isindex" >
+                <label wx:for="{{is_index_item}}" wx:key="key">
+                  <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+                </label>
+              </radio-group>
+            </view>
+          </view>
+        </view>
+        <view class="card-inputlabel">
           <view class="label" style='width:40%'>产品特点</view>
           <view class="label-input">
             <input placeholder="填写产品特点" class="card-input" placeholder-class="gray3" maxlength="20" bindinput="input2"  name="trait" value="{{trait}}"/>

@@ -1,6 +1,7 @@
 // page/shuaidan/shuaidan.js
 var app = getApp();
 var dataAPI = require("../../utils/data.js");
+var util = require("../../utils/util.js");
 var maxTime = 2
 var currentTime = maxTime //倒计时的事件（单位：s） 
 Page({
@@ -10,17 +11,21 @@ Page({
    */
   data: {
     array: ['主打产品', '民间产品', '银行产品'],
-    
+    is_index_item: [
+      { name: '是', value: 1 },
+      { name: '否', value: 0 },
+    ],
     show:true,
     product_name: "",
     product_type:0,
+    is_index:"",
     trait: "",//'产品特点',
     fund: "",//'资金方',
     package_content: "",//'包装内容',
     required_materials: "",// '所需材料',
   },
   bindPickerChange: function (e) {
-    
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     app.productData.product_type = e.detail.value + 1;
     this.setData({
       product_type: e.detail.value
@@ -39,11 +44,13 @@ Page({
         app.productData = res.data,       
         this.setData({
           product_name: res.data.product_name,
-          product_type: 2,
+          product_type: res.data.product_type,
+          is_index:res.data.is_index,
           trait: res.data.trait,//'产品特点',
           fund: res.data.fund,//'资金方',
           package_content: res.data.package_content,//'包装内容',
           required_materials: res.data.required_materials,// '所需材料',
+          is_index_item: util.getCheckedList(this.data.is_index_item, res.data.is_index)
         });
       });
     }else{
@@ -53,6 +60,7 @@ Page({
       app.productData = {
         product_name: "",
         product_type: 0,
+        is_index:"",
         trait: "",//'产品特点',
         fund: "",//'资金方',
         age: "",// '人员-年龄',
@@ -98,6 +106,9 @@ Page({
     }
     console.log(app.productData);
   },
+  input_isindex:function(e){
+    app.productData.is_index = e.detail.value;
+  },
   input1: function (e) {
     app.productData.product_name = e.detail.value;
   },
@@ -116,7 +127,8 @@ Page({
   
   formSubmit:function(e){   
     let data = app.productData;
-    
+    data.nationality = data.nationality.join();
+    console.log(data);
     if(data.product_name==""){
       wx.showToast({
         title: '请输入产品名称',

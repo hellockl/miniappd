@@ -75,12 +75,20 @@ function getCheckedList(data,checked){
   }
   return data;
 }
-
+function getNameByValue(data,checked){
+  var name = [];
+  for (let i = 0; i < data.length; i++) {
+    if (checked.indexOf(data[i].value) != -1) {
+      name.push(data[i].name);
+    }
+  }
+  return name.join();
+}
 
 module.exports = {
   formatTime: formatTime,
   formatTime2: formatTime2,
   getUserInfo:getUserInfo,
-  getCheckedList: getCheckedList
-  
+  getCheckedList: getCheckedList,
+  getNameByValue: getNameByValue
 }

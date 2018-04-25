@@ -159,7 +159,8 @@ page .btn{
   border-bottom: 1rpx solid #f0eff5;
 }
 .card-inputlabel:last-child {
-  border-bottom: 0;
+  border-bottom: 1rpx solid #f0eff5;
+  margin-bottom: 40rpx;
 }
 .card-inputlabel .card-input {
   border: none;

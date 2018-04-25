@@ -8,8 +8,10 @@
         <view class="card-inputlabel">
           <view class="label">年龄</view>
           <view class='label-input'>
-          <input placeholder="填写最小年龄" class="card-input" style="text-align:right " value="{{age}}" bindinput="input1" placeholder-class="gray3" maxlength="20" name="age" />至
           <input placeholder="填写最大年龄" class="card-input" style="text-align:right " value="{{age_max}}" bindinput="input1_1" placeholder-class="gray3" maxlength="20" name="age_max" />
+          至
+          <input placeholder="填写最小年龄" class="card-input" style="text-align:right " value="{{age}}" bindinput="input1" placeholder-class="gray3" maxlength="20" name="age" />
+          
           </view>
         </view>
         <view class="card-inputlabel">
@@ -19,8 +21,8 @@
           </view>
         </view>
         <view class="card-inputlabel">
-          <view class="label">国、户籍</view>
-          <view class='label-input'>
+          <view class="label" style="width:30%">国、户籍</view>
+          <view class='label-input' style="width:70%">
           <view class='radio-class'>
             <checkbox-group name="nationality" bindchange="input3">
               <label wx:for="{{nationality_item}}" wx:key="key">

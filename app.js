@@ -44,6 +44,7 @@ App({
   productData:{
     product_name: "",
     product_type:0,
+    is_index:"",
     trait: "",//'产品特点',
     fund: "",//'资金方',
     age: "",// '人员-年龄',
