@@ -67,12 +67,20 @@ const getUserInfo = function(){
 }
 
 
-
+function getCheckedList(data,checked){
+  for (let i = 0; i < data.length; i++) {
+    if (checked.indexOf(data[i].value) != -1) {
+      data[i].checked = true
+    }
+  }
+  return data;
+}
 
 
 module.exports = {
   formatTime: formatTime,
   formatTime2: formatTime2,
   getUserInfo:getUserInfo,
+  getCheckedList: getCheckedList
   
 }

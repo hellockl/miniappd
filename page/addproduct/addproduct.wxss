@@ -72,12 +72,21 @@
 .card-inputlabel {
   display: flex;
 }
+.label-input{
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.card-textarea{
+  font-size:26rpx;
+  padding:18rpx 20rpx;
+}
 
 .card-inputlabel .label {
   margin-right: 5rpx;
   padding: 18rpx 0;
   font-size: 16px;
-  width:50%
+  width:20%
 }
 
 .card-inputlabel .label.icon-location {
@@ -151,6 +160,8 @@ page .btn{
 .card-inputlabel{
   display: flex;
   align-items: center;
+  min-height:80rpx;
+
 }
 .card-inputlabel {
   border-bottom: 1rpx solid #f0eff5;

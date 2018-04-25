@@ -1,5 +1,6 @@
 var app = getApp();
-var dataAPI = require("../../utils/data.js")
+var dataAPI = require("../../utils/data.js");
+var util = require("../../utils/util.js");
 Page({
   
   data: {
@@ -7,10 +8,16 @@ Page({
     product_list1:[],
     product_list2: [],
     product_list3: [],
+    nationality_item: [
+      { name: '中国', value: 0 },
+      { name: '港澳台', value: 1 },
+      { name: '福建', value: 2 },
+    ],
     
       headPic:"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLs1FRrgeeEYuZWfWFEdWE7ibAPye89EBqYGKPM7AZdaRwLvL739EdbYPlbaBB4xictCjzAtRejRtcw/0"
   },
   onLoad(e) {
+    console.log(util.getCheckedList(this.data.nationality_item,"0,2"));
     var openid = wx.getStorageSync('openid');
     if (openid =="oJbL05SHv-F5-u1-utKJZ03RTJr4"){
       

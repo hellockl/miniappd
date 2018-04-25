@@ -7,22 +7,27 @@
       <view class="card-formitem">
         <view class="card-inputlabel">
           <view class="label">年龄</view>
+          <view class='label-input'>
           <input placeholder="填写最小年龄" class="card-input" style="text-align:right " value="{{age}}" bindinput="input1" placeholder-class="gray3" maxlength="20" name="age" />至
           <input placeholder="填写最大年龄" class="card-input" style="text-align:right " value="{{age_max}}" bindinput="input1_1" placeholder-class="gray3" maxlength="20" name="age_max" />
+          </view>
         </view>
         <view class="card-inputlabel">
-          <view class="label" style='width:40%'>年龄备注</view>
-          <input placeholder="填写年龄备注" class="card-input" placeholder-class="gray3" maxlength="20" bindinput="input2" name="age_remarks" value="{{age_remarks}}"/>
+          <view class="label">年龄备注</view>
+          <view class='label-input'>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="填写年龄备注" placeholder-class="gray3"  bindinput="input2" name="age_remarks" value="{{age_remarks}}"/>
+          </view>
         </view>
         <view class="card-inputlabel">
-          <view class="label" style='width:36%'>国、户籍</view>
-          <!-- <input placeholder="请填国、户籍" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input3" name="nationality" value="{{nationality}}"/> -->
+          <view class="label">国、户籍</view>
+          <view class='label-input'>
           <view class='radio-class'>
             <checkbox-group name="nationality" bindchange="input3">
               <label wx:for="{{nationality_item}}" wx:key="key">
                 <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
               </label>
             </checkbox-group>
+          </view>
           </view>
         </view>
         
@@ -36,7 +41,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">征信界定备注</view>
-          <input placeholder="请填征信界定备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input5" name="credit_line_remarks" value="{{credit_line_remarks}}"/>
+          <textarea placeholder="请填征信界定备注" maxlength="-1" class="card-textarea" auto-height placeholder-class="gray3" bindinput="input5" name="credit_line_remarks" value="{{credit_line_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">收入</view>

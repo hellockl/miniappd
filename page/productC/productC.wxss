@@ -72,7 +72,10 @@
 .card-inputlabel {
   display: flex;
 }
-
+.card-textarea{
+  font-size:26rpx;
+  padding:18rpx 20rpx;
+}
 .card-inputlabel .label {
   margin-right: 5rpx;
   padding: 18rpx 0;

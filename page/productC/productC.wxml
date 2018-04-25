@@ -20,8 +20,8 @@
         <view class="card-inputlabel">
           <view class="label">期限</view>
           <view class='radio-class'>
-            <checkbox-group name="spare_house" bindchange="input4">
-              <label wx:for="{{spare_house_item}}" wx:key="key">
+            <checkbox-group name="term" bindchange="input4">
+              <label wx:for="{{term_item}}" wx:key="key">
                 <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
               </label>
             </checkbox-group>
@@ -29,7 +29,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">期限备注</view>
-          <input placeholder="请填写期限备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input5" name="term_remarks" value="{{term_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="请填写期限备注" placeholder-class="gray3"  bindinput="input5" name="term_remarks" value="{{term_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label" style='width:66%'>还款方式</view>
@@ -43,7 +43,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">还款方式备注</view>
-          <input placeholder="请填写还款方式备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input7" name="repayment_method_remarks" value="{{repayment_method_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="请填写还款方式备注" placeholder-class="gray3" bindinput="input7" name="repayment_method_remarks" value="{{repayment_method_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">还款日</view>
@@ -55,7 +55,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">贷款利率备注</view>
-          <input placeholder="请填写贷款利率备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input10"  name="loan_rate_remarks" value="{{loan_rate_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height  placeholder="请填写贷款利率备注" placeholder-class="gray3"  bindinput="input10"  name="loan_rate_remarks" value="{{loan_rate_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">逾期罚息</view>

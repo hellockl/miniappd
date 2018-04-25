@@ -1,6 +1,7 @@
 // page/shuaidan/shuaidan.js
 var app = getApp();
 var dataAPI = require("../../utils/data.js");
+var util = require("../../utils/util.js");
 var maxTime = 2
 var currentTime = maxTime //倒计时的事件（单位：s） 
 Page({
@@ -41,8 +42,11 @@ Page({
       credit_line2: data.credit_line2 == "" ? "" : data.credit_line2,//'人员-征信界定累(最高逾期)',
       credit_line_remarks: data.credit_line_remarks == "" ? "" : data.credit_line_remarks,//'人员-征信界定配注',
       income: data.income == "" ? "" : data.income,// '人员-收入',
+      nationality_item: util.getCheckedList(this.data.nationality_item, data.nationality)
     })
+    
   },
+  
   input1: function (e) {
     app.productData.age = e.detail.value;
   },

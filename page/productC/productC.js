@@ -1,6 +1,7 @@
 // page/shuaidan/shuaidan.js
 var app = getApp();
 var dataAPI = require("../../utils/data.js");
+var util = require("../../utils/util.js");
 var maxTime = 2
 var currentTime = maxTime //倒计时的事件（单位：s） 
 Page({
@@ -17,14 +18,18 @@ Page({
       { name: '等本等息', value: 3 },
       { name: '其它', value: 4 }
     ],
-    
+    term_item:[
+      { name: '1年', value: 1 },
+      { name: '最长20年', value: 2 }
+      
+    ],
     is_justice_item: [
       { name: '有', value: 1 },
-      { name: '无', value: 0, checked: 'true' },
+      { name: '无', value: 0 },
     ],
     is_evaluate_item: [
       { name: '有', value: 1 },
-      { name: '无', value: 0, checked: 'true' }
+      { name: '无', value: 0 }
     ],
     quota: "",// '额度',
     quota_remarks: "",// '额度配注',
@@ -58,6 +63,7 @@ Page({
       quota_remarks: data.quota_remarks,
       mortgage_rate: data.mortgage_rate,
       term: data.term,
+      
       term_remarks: data.term_remarks,
       repayment_method: data.repayment_method,
       repayment_method_remarks: data.repayment_method_remarks,
@@ -72,6 +78,10 @@ Page({
       evaluate_fee: data.evaluate_fee,
       settle_fee: data.settle_fee,
       other_fee: data.other_fee,
+      term_item: util.getCheckedList(this.data.term_item, data.term),
+      repayment_method_item: util.getCheckedList(this.data.repayment_method_item, data.repayment_method),
+      is_justice_item: util.getCheckedList(this.data.is_justice_item, data.is_justice),
+      is_evaluate_item: util.getCheckedList(this.data.is_evaluate_item, data.is_evaluate),
     })
   },
   input1: function (e) {

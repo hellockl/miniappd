@@ -134,7 +134,7 @@
         </view>
       </view>
       <view class='recommend-one'>
-        <view class='content1'>
+        <view class='content1' style='width:280rpx'>
           接受未成年/老人
         </view>
         <view class='content2'>
@@ -142,7 +142,7 @@
         </view>
       </view>
       <view class='recommend-one'>
-        <view class='content1'>
+        <view class='content1' style='width:280rpx'>
           是否接受第三方抵押
         </view>
         <view class='content2'>

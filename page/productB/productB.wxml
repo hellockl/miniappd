@@ -17,7 +17,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">房产类型备注</view>
-          <input placeholder="房产类型备注" class="card-input" placeholder-class="gray3" bindinput="input2" maxlength="20" name="house_type_remarks" value="{{house_type_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="房产类型备注" placeholder-class="gray3" bindinput="input2"  name="house_type_remarks" value="{{house_type_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label" style='width:38%'>地地性质</view>
@@ -41,7 +41,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">准入区域备注</view>
-          <input placeholder="请填写准入区域备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input5" name="access_area_remarks" value="{{access_area_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="请填写准入区域备注" placeholder-class="gray3" bindinput="input5" name="access_area_remarks" value="{{access_area_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">面积要求</view>
@@ -83,7 +83,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">备用房备注</view>
-          <input placeholder="请填写备用房备注" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input11" name="spare_house_remarks" value="{{spare_house_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="请填写备用房备注" placeholder-class="gray3"   bindinput="input11" name="spare_house_remarks" value="{{spare_house_remarks}}"/>
         </view>
          
       </view>
