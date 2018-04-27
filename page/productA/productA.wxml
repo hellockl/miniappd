@@ -17,7 +17,7 @@
         <view class="card-inputlabel">
           <view class="label">年龄备注</view>
           <view class='label-input'>
-          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="填写年龄备注" placeholder-class="gray3"  bindinput="input2" name="age_remarks" value="{{age_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="请填写年龄备注" placeholder-class="gray3"  bindinput="input2" name="age_remarks" value="{{age_remarks}}"/>
           </view>
         </view>
         <view class="card-inputlabel">
@@ -35,19 +35,19 @@
         
         <view class="card-inputlabel">
           <view class="label">征信界定连</view>
-          <input placeholder="请填征信界定连" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input4" name="credit_line" value="{{credit_line}}"/>
+          <input placeholder="请填写征信界定连" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input4" name="credit_line" value="{{credit_line}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">征信界定累</view>
-          <input placeholder="请填征信界定累" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input4_4" name="credit_line2" value="{{credit_line2}}"/>
+          <input placeholder="请填写征信界定累" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input4_4" name="credit_line2" value="{{credit_line2}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">征信界定备注</view>
-          <textarea placeholder="请填征信界定备注" maxlength="-1" class="card-textarea" auto-height placeholder-class="gray3" bindinput="input5" name="credit_line_remarks" value="{{credit_line_remarks}}"/>
+          <textarea placeholder="请填写征信界定备注" maxlength="-1" class="card-textarea" auto-height placeholder-class="gray3" bindinput="input5" name="credit_line_remarks" value="{{credit_line_remarks}}"/>
         </view>
         <view class="card-inputlabel">
-          <view class="label">收入</view>
-          <input placeholder="请填收入" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="income" value="{{income}}"/>
+          <view class="label">收入认定</view>
+          <input placeholder="请填写收入认定" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="income" value="{{income}}"/>
         </view>
       </view>
    

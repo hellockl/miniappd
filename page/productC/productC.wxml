@@ -11,7 +11,7 @@
         </view>
         <view class="card-inputlabel">
           <view class="label" style='width:40%'>额度备注</view>
-          <input placeholder="填写额度备注" class="card-input" placeholder-class="gray3" maxlength="20" bindinput="input2" name="quota_remarks" value="{{quota_remarks}}"/>
+          <textarea maxlength="-1" class="card-textarea" auto-height placeholder="填写额度备注" placeholder-class="gray3" bindinput="input2" name="quota_remarks" value="{{quota_remarks}}"/>
         </view>
         <view class="card-inputlabel">
           <view class="label">抵押率</view>

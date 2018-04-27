@@ -22,14 +22,14 @@ Page({
       { value: 2, name: '转让' }
     ],
     access_area_item:[
-      { value: '1', name: '黄浦' },
-      { value: '2', name: '徐汇' },
-      { value: '3', name: '长宁' },
-      { value: '4', name: '静安' }
+      { value: '1', name: '上海其它区域' },
+      { value: '2', name: '金山' },
+      { value: '3', name: '崇明' },
+      { value: '4', name: '奉贤' }
     ],
     access_range_item:[
       { value: 0, name: '未成年人' },
-      { value: 1, name: '65周岁以下' }
+      { value: 1, name: '老人(65周岁以上)' }
     ],
     access_third_party_mortgage_item:[
       { value: 0, name: '直系亲属' },

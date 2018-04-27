@@ -20,23 +20,27 @@
           <textarea maxlength="-1" class="card-textarea" auto-height placeholder="房产类型备注" placeholder-class="gray3" bindinput="input2"  name="house_type_remarks" value="{{house_type_remarks}}"/>
         </view>
         <view class="card-inputlabel">
-          <view class="label" style='width:38%'>地地性质</view>
-          <view class='radio-class'>
-            <checkbox-group name="land_property" bindchange="input3">
-              <label wx:for="{{land_property_item}}" wx:key="key">
-                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
-              </label>
-            </checkbox-group>
+          <view class="label">地地性质</view>
+          <view class='label-input'>
+            <view class='radio-class'>
+              <checkbox-group name="land_property" bindchange="input3">
+                <label wx:for="{{land_property_item}}" wx:key="key">
+                  <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+                </label>
+              </checkbox-group>
+            </view>
           </view>
         </view>
         <view class="card-inputlabel">
           <view class="label">准入区域</view>
-          <view class='radio-class'>
-            <checkbox-group name="access_area" bindchange="input4">
-              <label wx:for="{{access_area_item}}" wx:key="key">
-                <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
-              </label>
-            </checkbox-group>
+          <view class='label-input'>
+            <view class='radio-class'>
+              <checkbox-group name="access_area" bindchange="input4">
+                <label wx:for="{{access_area_item}}" wx:key="key">
+                  <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+                </label>
+              </checkbox-group>
+            </view>
           </view>
         </view>
         <view class="card-inputlabel">
@@ -45,20 +49,25 @@
         </view>
         <view class="card-inputlabel">
           <view class="label">面积要求</view>
-          <input placeholder="请填写面积要求" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="area_reuqire" value="{{area_reuqire}}"/>
+          <view class="label-input">
+          <input placeholder="最大面积" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="area_reuqire_max" value="{{area_reuqire_max}}"/>~
+          <input placeholder="最小面积" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input6" name="area_reuqire" value="{{area_reuqire}}"/>
+          </view>
         </view>
         <view class="card-inputlabel">
           <view class="label">房龄</view>
           <input placeholder="请填写房龄" class="card-input" placeholder-class="gray3" maxlength="30" bindinput="input7" name="house_age" value="{{house_age}}"/>
         </view>
         <view class="card-inputlabel">
-          <view class="label" style='width:45%'>接受范围</view>
+          <view class="label">接受范围</view>
+          <view class="label-input">
           <view class='radio-class'>
             <checkbox-group name="access_range" bindchange="input8">
               <label wx:for="{{access_range_item}}" wx:key="key">
                 <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
               </label>
             </checkbox-group>
+          </view>
           </view>
         </view>
         <view class="card-inputlabel">
